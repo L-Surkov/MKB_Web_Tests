@@ -45,8 +45,8 @@ tasks.withType(Test) {
     }
 }
 
-tasks.register('form_test', Test) {
+tasks.register('mkb_test', Test) {
     useJUnitPlatform {
-        includeTags("FormTest")
+        includeTags("MainPageTests")
     }
 }
