@@ -21,7 +21,7 @@ public class MainPage {
 
 
     public MainPage openPage() {
-        open(Configuration.baseUrl);
+        open();
 
         return this;
     }
