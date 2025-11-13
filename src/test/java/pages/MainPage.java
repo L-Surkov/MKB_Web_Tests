@@ -3,36 +3,36 @@ package pages;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
     private SelenideElement
-            catalogFilter = $("#catalog-section__filter"),
+            catalogFilter = $(".catalog-section__filter"),
             phoneInput = $("#phone-number"),
-            submitConnectButton = $(".form__btn.btn").shouldHave(text("Свяжитесь с нами")),
+            submitConnectButton = $("#MANAGER_FEEDBACK .form__btn.btn"),
             emailInput = $("#email"),
             checkBoxForMailing = $("#ibloks"),
-            checkBoxSelectPif = $("#select_pif"),
-            checkBoxSelectPifDt = $("#select_dt_pif"),
-            submitMailButton = $(".form__btn.btn").shouldHave(text("Подписаться на рассылку")),
-            requiredInfoDropDown = $("#info-text__title");
+            checkBoxForMailingList = $(".form__select-list"),
+            submitMailButton = $("#SUBSCRIBE_MAILING .form__btn.btn"),
+            requiredInfoDropDown = $(".info-text__title");
 
 
     public MainPage openPage() {
-        open();
+        open(Configuration.baseUrl);
 
         return this;
     }
 
     public MainPage setСatalogFilter(String value) {
-        catalogFilter.setValue(value);
+        catalogFilter.scrollTo();
+        catalogFilter.$(byText(value)).click();
 
         return this;
     }
 
     public MainPage setPhone(String value) {
+        phoneInput.scrollTo();
         phoneInput.setValue(value);
 
         return this;
@@ -45,7 +45,9 @@ public class MainPage {
     }
 
     public MainPage setEmail(String value) {
+        emailInput.scrollTo();
         emailInput.setValue(value);
+
         return this;
     }
 
@@ -56,29 +58,19 @@ public class MainPage {
     }
 
     public MainPage setCheckBoxForMailing(String value) {
-        checkBoxForMailing.$(byText(value)).click();
+        checkBoxForMailing.click();
+        checkBoxForMailingList.$(byText(value)).click();
 
         return this;
     }
 
     public MainPage getRequiredInfoDropDown() {
+        requiredInfoDropDown.scrollTo();
+        executeJavaScript("arguments[0].click()", requiredInfoDropDown);
         requiredInfoDropDown.click();
 
         return this;
     }
 
-
-    public MainPage setCheckBoxSelectPif(String value) {
-        checkBoxSelectPif.$(byText(value)).click();
-
-        return this;
-    }
-
-
-    public MainPage setCheckBoxSelectPifDt(String value) {
-        checkBoxSelectPifDt.$(byText(value)).click();
-
-        return this;
-    }
 
 }

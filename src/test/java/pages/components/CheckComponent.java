@@ -8,11 +8,11 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CheckComponent {
-    private SelenideElement mainTitle = $("#hero__title"),
-            productCard = $("#product-card"),
-            connectionFormError = $("#form-message form-error"),
-            subscribeFormError = $("#form-message sub form-error"),
-            reqInfoInFutter = $("#info-text__body-inner");
+    private SelenideElement mainTitle = $(".hero__title"),
+            productCard = $(".product-card"),
+            connectionFormError = $(".form-message.form-error"),
+            subscribeFormError = $("#SUBSCRIBE_MAILING .form-message.sub.form-error"),
+            reqInfoInFutter = $(".info-text__body p:nth-child(4)");
 
     public CheckComponent checkMainPageIsOpen() {
         mainTitle.shouldHave(text("ОПИФ рыночных финансовых инструментов «МКБ Денежный рынок»"));
@@ -27,22 +27,23 @@ public class CheckComponent {
     }
 
     public CheckComponent checkConnectionFormError() {
-        connectionFormError.shouldNotBe(visible);
+        connectionFormError.shouldBe(visible);
         connectionFormError.shouldHave(text("Некорректный номер телефона"));
 
         return this;
     }
 
     public CheckComponent checkSubscribeFormError() {
-        subscribeFormError.shouldNotBe(visible);
+        subscribeFormError.shouldBe(visible);
         subscribeFormError.shouldHave(text("Email адрес введён некорректно"));
 
         return this;
     }
 
     public CheckComponent checkReqInfoInFutter() {
+        reqInfoInFutter.shouldBe(visible);
         reqInfoInFutter.shouldHave(text(
-                "Акционерное общество «Управляющая компания «МКБ Инвестиции» (АО «УК МКБ Инвестиции») " +
+                "Акционерное общество «Управляющая компания «МКБ Инвестиции» (АО «УК МКБ Инвестиции»). " +
                         "Государственный регистрационный номер (при создании) № 055.391 от 19.04.1996, " +
                         "ОГРН 1027700590301. "));
 

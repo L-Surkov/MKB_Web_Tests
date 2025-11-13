@@ -25,6 +25,7 @@ public class MainPageObjectsTests extends TestBase {
         AttachForAllure.addVideo();
 
     }
+
     @Test
     @Description("Проверка отображения главной страницы сайта")
     @Tag("MainPageTests")
@@ -38,5 +39,80 @@ public class MainPageObjectsTests extends TestBase {
         });
     }
 
+    @Test
+    @Description("Проверка отображения карточек продуктов при выборе чек-бокса")
+    @Tag("MainPageTests")
+    void CheckBoxMainPageAndProductCardIsVisible() {
+        step("Открыть страницу сайта МКБ Инвестиции", () -> {
+            mainPage.openPage();
+        });
+        step("Проскролить до блока с выбором и выбрать значение", () -> {
+            mainPage.setСatalogFilter(testData.catalogFilterOption);
+        });
 
+        step("Проверить корректное отображение карточки продукта", () -> {
+            checkComponent.checkProductCardWithSelection();
+        });
+
+    }
+
+    @Test
+    @Description("Проверка невозможности отправки формы с некорректным номером телефона")
+    @Tag("MainPageTests")
+    void NegativeTestWithConnectionFormOnMainPage() {
+        step("Открыть страницу сайта МКБ Инвестиции", () -> {
+            mainPage.openPage();
+        });
+        step("Проскролить до формы связи и ввести некорректный номер телефона", () -> {
+            mainPage.setPhone(testData.userNumber);
+        });
+        step("Нажать на кнопку 'Связаться'", () -> {
+            mainPage.submitConnect();
+        });
+
+        step("Проверить отображение текста ошибки о некорректности номера телефона", () -> {
+            checkComponent.checkConnectionFormError();
+        });
+
+    }
+
+    @Test
+    @Description("Проверка невозможности отправки формы с некорректным email")
+    @Tag("MainPageTests")
+    void NegativeTestWithSubscribeFormOnMainPage() {
+        step("Открыть страницу сайта МКБ Инвестиции", () -> {
+            mainPage.openPage();
+        });
+        step("Проскролить до формы подписки и ввести некорректный email", () -> {
+            mainPage.setEmail(testData.email);
+        });
+        step("Выбрать раздел для рассылки", () -> {
+            mainPage.setCheckBoxForMailing(testData.checkBoxMailing);
+        });
+        step("Нажать кнопку 'Подписаться на рассылку'", () -> {
+            mainPage.submitEmail();
+        });
+
+        step("Проверить отображение текста ошибки о некорректности email", () -> {
+            checkComponent.checkSubscribeFormError();
+        });
+
+    }
+
+    @Test
+    @Description("Проверка содержания обязательной информации в футере сайта")
+    @Tag("MainPageTests")
+    void PositiveFutterTestWithReqInfo() {
+        step("Открыть страницу сайта МКБ Инвестиции", () -> {
+            mainPage.openPage();
+        });
+        step("Проскролить до футера, элемента раскрытия", () -> {
+            mainPage.getRequiredInfoDropDown();
+        });
+
+        step("Проверить содержимое обязательной информации", () -> {
+            checkComponent.checkReqInfoInFutter();
+        });
+
+    }
 }
