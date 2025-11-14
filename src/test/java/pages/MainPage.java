@@ -26,6 +26,7 @@ public class MainPage {
 
     public MainPage setСatalogFilter(String value) {
         catalogFilter.scrollTo();
+        catalogFilter.$(byText(value)).scrollIntoView(true);
         catalogFilter.$(byText(value)).click();
 
         return this;
