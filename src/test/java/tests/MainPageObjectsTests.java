@@ -2,6 +2,7 @@ package tests;
 
 import jdk.jfr.Description;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.components.CheckComponent;
@@ -27,7 +28,7 @@ public class MainPageObjectsTests extends TestBase {
     }
 
     @Test
-    @Description("Проверка отображения главной страницы сайта")
+    @DisplayName("Проверка отображения главной страницы сайта")
     @Tag("MainPageTests")
     void positiveMainPageIsVisible() {
         step("Открыть страницу сайта МКБ Инвестиции", () -> {
@@ -40,7 +41,7 @@ public class MainPageObjectsTests extends TestBase {
     }
 
     @Test
-    @Description("Проверка отображения карточек продуктов при выборе чек-бокса")
+    @DisplayName("Проверка отображения карточек продуктов при выборе чек-бокса")
     @Tag("MainPageTests")
     void CheckBoxMainPageAndProductCardIsVisible() {
         step("Открыть страницу сайта МКБ Инвестиции", () -> {
@@ -57,7 +58,7 @@ public class MainPageObjectsTests extends TestBase {
     }
 
     @Test
-    @Description("Проверка невозможности отправки формы с некорректным номером телефона")
+    @DisplayName("Проверка невозможности отправки формы с некорректным номером телефона")
     @Tag("MainPageTests")
     void NegativeTestWithConnectionFormOnMainPage() {
         step("Открыть страницу сайта МКБ Инвестиции", () -> {
@@ -77,7 +78,7 @@ public class MainPageObjectsTests extends TestBase {
     }
 
     @Test
-    @Description("Проверка невозможности отправки формы с некорректным email")
+    @DisplayName("Проверка невозможности отправки формы с некорректным email")
     @Tag("MainPageTests")
     void NegativeTestWithSubscribeFormOnMainPage() {
         step("Открыть страницу сайта МКБ Инвестиции", () -> {
@@ -100,7 +101,7 @@ public class MainPageObjectsTests extends TestBase {
     }
 
     @Test
-    @Description("Проверка содержания обязательной информации в футере сайта")
+    @DisplayName("Проверка содержания обязательной информации в футере сайта")
     @Tag("MainPageTests")
     void PositiveFutterTestWithReqInfo() {
         step("Открыть страницу сайта МКБ Инвестиции", () -> {
