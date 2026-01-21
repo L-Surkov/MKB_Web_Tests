@@ -38,7 +38,7 @@ ____
 
 ____
 <a id="cases"></a>
-## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
+## <a name="Список автоматизированных тест-кейсов">**Список автоматизированных тест-кейсов:**</a>
 ____
 - ✓ *Проверка отображения заголовка на главной страницы с корректным текстом*
 - ✓ *Проверка корректной работы чек-боксов и отображения карточек продуктов*
@@ -46,13 +46,15 @@ ____
 - ✓ *Проверка ввода некорректного email, заполнения чек-бокса и нажатия кнопки подписки на рассылку*
 - ✓ *Проверка отображения обязательной информации в нижней части сайта*
 
-
+## <a name="Список ручных тест-кейсов">**Список ручных тест-кейсов:**</a>
+- ✓ *Проверка отображения всех разделов страницы "Раскрытие информации"*
+- ✓ *Проверка корректной работы поиска на странице "Раскрытие информации"*
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsDemoQA_lesson12/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsMKBInvest_Web_Tests/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsDemoQA_lesson12/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsMKBInvest_Web_Tests/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
