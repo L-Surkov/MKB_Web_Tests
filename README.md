@@ -51,10 +51,10 @@ ____
 - ✓ *Проверка корректной работы поиска на странице "Раскрытие информации"*
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsDemoQA_lesson12/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsMKBInvest_Web_Tests/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsDemoQA_lesson12/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsMKBInvest_Web_Tests/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
