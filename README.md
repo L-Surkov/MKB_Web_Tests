@@ -78,7 +78,7 @@ clean mkb_test
 "-Dbrowser=${browser}"
 "-DbrowserVersion=${browserVersion}"
 "-DbrowserSize=${browserSize}"
-"-Dremote="URL с кредами к Selenoid"
+"-DconfigMode=remote (для удалённого запуска, local - для локального)
 ```
 ___
 <a id="allure"></a>
