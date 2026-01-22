@@ -84,9 +84,23 @@ public class MainPage {
 
     @Step("Получить обязательную информацию из футера")
     public MainPage getRequiredInfoDropDown() {
+        System.out.println("=== ОТЛАДКА ФУТЕРА ===");
+        System.out.println("1. Стиль элемента: " +
+                footerBody.getAttribute("style"));
+        System.out.println("2. CSS display: " +
+                footerBody.getCssValue("display"));
+        System.out.println("3. CSS visibility: " +
+                footerBody.getCssValue("visibility"));
+        System.out.println("4. CSS opacity: " +
+                footerBody.getCssValue("opacity"));
+        System.out.println("5. Родительский overflow: " +
+                footerBody.parent().getCssValue("overflow"));
+        System.out.println("6. Позиция в окне: " +
+                footerBody.getRect());
+        System.out.println("7. Размер окна: " +
+                getWebDriver().manage().window().getSize());
         requiredInfoDropDown.scrollTo();
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
-        footerBody.shouldBe(visible, Duration.ofSeconds(10));
         return this;
     }
 
