@@ -86,6 +86,7 @@ public class MainPage {
     public MainPage getRequiredInfoDropDown() {
         requiredInfoDropDown.scrollTo();
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
+        footerBody.shouldBe(visible, Duration.ofSeconds(10));
         return this;
     }
 
