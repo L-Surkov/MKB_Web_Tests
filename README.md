@@ -78,7 +78,7 @@ clean mkb_test
 "-Dbrowser=${browser}"
 "-DbrowserVersion=${browserVersion}"
 "-DbrowserSize=${browserSize}"
-"-Dremote="URL с кредами к Selenoid"*
+"-Dremote="URL с кредами к Selenoid"
 ```
 ___
 <a id="allure"></a>
