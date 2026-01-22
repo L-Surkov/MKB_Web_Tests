@@ -89,6 +89,7 @@ public class MainPage {
                 .shouldBe(enabled, Duration.ofSeconds(10));
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
         footerBody.scrollIntoView("{block: 'start', inline: 'nearest'}");
+        footerBody.shouldHave(cssValue("display", "block"), Duration.ofSeconds(10));
         return this;
     }
 
