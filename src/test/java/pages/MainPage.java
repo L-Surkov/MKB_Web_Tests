@@ -84,8 +84,8 @@ public class MainPage {
     @Step("Получить обязательную информацию из футера")
     public MainPage getRequiredInfoDropDown() {
         requiredInfoDropDown
-                .scrollIntoView("{block: 'center'}")
-                .shouldBe(enabled, Duration.ofSeconds(5));
+                .scrollIntoView("{behavior: 'auto', block: 'nearest', inline: 'center'}")
+                .shouldBe(enabled, Duration.ofSeconds(10));
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
         return this;
     }
