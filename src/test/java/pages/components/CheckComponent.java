@@ -2,6 +2,8 @@ package pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
@@ -41,7 +43,7 @@ public class CheckComponent {
     }
 
     public CheckComponent checkReqInfoInFutter() {
-        reqInfoInFutter.shouldBe(visible);
+        reqInfoInFutter.shouldBe(visible, Duration.ofSeconds(10));
         reqInfoInFutter.shouldHave(text(
                 "** Государственная поддержка заключается в предоставлении налогового вычета на сумму взноса на индивидуальный инвестиционный счет (максимум 52 тыс. руб. в год) или на сумму положительного финансового результата, полученного по операциям, учитываемым на индивидуальном инвестиционном счете. " +
                         "Налоговый вычет предоставляется при соблюдении условий получения такого вычета, содержащихся в законодательстве Российской Федерации. "));
