@@ -1,6 +1,7 @@
 package tests;
 
 import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -8,10 +9,11 @@ import org.junit.jupiter.api.Test;
 @Feature("Логин")
 public class ManualTests {
 
-    @Story("Отображение обяательной информации на странице")
+    @Story("Отображение обязательной информации на странице")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
     @Description("Проверка корректного отображения разделов раскрытия информации")
+    @DisplayName("Проверка корректного отображения разделов раскрытия информации")
     @Test
     @Tag("MainPageTests")
     void mkbLoginTest() {
@@ -20,10 +22,11 @@ public class ManualTests {
         Allure.step("Проверить отображение информации в каждом разделе слева");
     }
 
-    @Story("Отображение обяательной информации на странице")
+    @Story("Отображение обязательной информации на странице")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
-    @Description("Проверка поиска информации на странице")
+    @DisplayName("Проверка поиска информации на странице раскрытия информации")
+    @Description("Проверка поиска информации на странице раскрытия информации")
     @Test
     @Tag("MainPageTests")
     void mkbLoginTestFail() {
