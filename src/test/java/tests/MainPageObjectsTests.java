@@ -87,6 +87,7 @@ public class MainPageObjectsTests extends TestBase {
     @Tag("MainPageTests")
     void positiveFutterTestWithReqInfo() {
         mainPage.openPage();
+        mainPage.closeCookieBanner();
         mainPage.getRequiredInfoDropDown();
         checkComponent.checkReqInfoInFutter();
     }

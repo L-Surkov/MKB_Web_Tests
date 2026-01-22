@@ -7,7 +7,10 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -21,6 +24,8 @@ public class MainPage {
             checkBoxForMailing = $("#ibloks"),
             checkBoxForMailingList = $(".form__select-list"),
             submitMailButton = $("#SUBSCRIBE_MAILING .form__btn.btn"),
+            cookieBanner = $(".coocke__inner"),
+            acceptButton = cookieBanner.$(".coocke__btn"),
             requiredInfoDropDown = $(".info-text__title");
 
 
@@ -81,6 +86,15 @@ public class MainPage {
     public MainPage getRequiredInfoDropDown() {
         requiredInfoDropDown.scrollTo();
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
+        return this;
+    }
+
+    @Step("Закрыть баннер с согласием на использование cookie")
+    public MainPage closeCookieBanner() {
+        if (cookieBanner.isDisplayed()) {
+            acceptButton.click();
+            cookieBanner.shouldNotBe(visible, Duration.ofSeconds(5));
+        }
         return this;
     }
 
