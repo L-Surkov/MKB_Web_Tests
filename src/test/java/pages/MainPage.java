@@ -25,6 +25,7 @@ public class MainPage {
             submitMailButton = $("#SUBSCRIBE_MAILING .form__btn.btn"),
             cookieBanner = $(".coocke__inner"),
             acceptButton = cookieBanner.$(".coocke__btn"),
+            footerBody = $(".info-text__body"),
             requiredInfoDropDown = $(".info-text__title");
 
 
@@ -87,6 +88,7 @@ public class MainPage {
                 .scrollIntoView("{behavior: 'auto', block: 'nearest', inline: 'center'}")
                 .shouldBe(enabled, Duration.ofSeconds(10));
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
+        footerBody.scrollIntoView("{block: 'start', inline: 'nearest'}");
         return this;
     }
 
