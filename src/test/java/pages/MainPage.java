@@ -9,8 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -84,7 +83,9 @@ public class MainPage {
 
     @Step("Получить обязательную информацию из футера")
     public MainPage getRequiredInfoDropDown() {
-        requiredInfoDropDown.scrollTo();
+        requiredInfoDropDown
+                .scrollIntoView("{block: 'center'}")
+                .shouldBe(enabled, Duration.ofSeconds(5));
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
         return this;
     }
