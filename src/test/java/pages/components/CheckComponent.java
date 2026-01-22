@@ -12,7 +12,7 @@ public class CheckComponent {
             productCard = $(".product-card"),
             connectionFormError = $(".form-message.form-error"),
             subscribeFormError = $("#SUBSCRIBE_MAILING .form-message.sub.form-error"),
-            reqInfoInFutter = $(".info-text__body p:nth-child(4)");
+            reqInfoInFutter = $(".info-text__body p:nth-child(2)");
 
     public CheckComponent checkMainPageIsOpen() {
         mainTitle.shouldHave(text("ОПИФ рыночных финансовых инструментов «МКБ Денежный рынок»"));
@@ -43,9 +43,8 @@ public class CheckComponent {
     public CheckComponent checkReqInfoInFutter() {
         reqInfoInFutter.shouldBe(visible);
         reqInfoInFutter.shouldHave(text(
-                "Акционерное общество «Управляющая компания «МКБ Инвестиции» (АО «УК МКБ Инвестиции»). " +
-                        "Государственный регистрационный номер (при создании) № 055.391 от 19.04.1996, " +
-                        "ОГРН 1027700590301. "));
+                "** Государственная поддержка заключается в предоставлении налогового вычета на сумму взноса на индивидуальный инвестиционный счет (максимум 52 тыс. руб. в год) или на сумму положительного финансового результата, полученного по операциям, учитываемым на индивидуальном инвестиционном счете. " +
+                        "Налоговый вычет предоставляется при соблюдении условий получения такого вычета, содержащихся в законодательстве Российской Федерации. "));
 
         return this;
     }
