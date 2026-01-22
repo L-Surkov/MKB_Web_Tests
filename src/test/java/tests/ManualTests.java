@@ -1,6 +1,7 @@
 package tests;
 
 import io.qameta.allure.*;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Epic("Страница Раскрытие информации")
@@ -12,6 +13,7 @@ public class ManualTests {
     @Owner("allure8")
     @Description("Проверка корректного отображения разделов раскрытия информации")
     @Test
+    @Tag("MainPageTests")
     void mkbLoginTest() {
         Allure.step("Открыть главную страницу сайта МКБ Инвестиции https://mkb-am.ru/");
         Allure.step("Перейти в раздел Раскрытие информации");
@@ -23,6 +25,7 @@ public class ManualTests {
     @Owner("allure8")
     @Description("Проверка поиска информации на странице")
     @Test
+    @Tag("MainPageTests")
     void mkbLoginTestFail() {
         Allure.step("Открыть главную страницу сайта МКБ Инвестиции https://mkb-am.ru/");
         Allure.step("Перейти в раздел Раскрытие информации");
