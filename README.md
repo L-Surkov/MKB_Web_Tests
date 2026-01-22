@@ -78,7 +78,7 @@ clean mkb_test
 "-Dbrowser=${browser}"
 "-DbrowserVersion=${browserVersion}"
 "-DbrowserSize=${browserSize}"
-"-Dremote="https://user1:1234@selenoid.autotests.cloud/wd/hub"*
+"-Dremote="URL с кредами к Selenoid"*
 ```
 ___
 <a id="allure"></a>
