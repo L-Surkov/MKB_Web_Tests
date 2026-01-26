@@ -75,14 +75,14 @@ gradle clean mkb_test
 ***Удалённый запуск через Jenkins:***
 ```bash  
 clean mkb_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DconfigMode=remote (для удалённого запуска, local - для локального)
+-Dbrowser=${browser}
+-DbrowserVersion=${browserVersion}
+-DbrowserSize=${browserSize}
+-DconfigMode=remote (для удалённого запуска, local - для локального)
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/038-L_Surkov-JenkinsMKBInvest_Web_Tests/20/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
@@ -103,6 +103,15 @@ ___
 <img title="Allure Graphics" src="images/screen/allure_graths.png" width="850">
 
 <img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
+</p>
+
+____
+
+<a id="allure-testops"></a>
+## <img alt="TestOps" height="25" src="images/logo/TestOps_logo_2.png" width="25"/></a> <a name="TestOps"></a>Интеграция с Allure TestOps [проект](https://allure.autotests.cloud/launch/50972/tree?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=0)</a>
+___
+<p align="center">  
+<img title="Allure TestOps Overview Dashboard" src="images/screen/TestOps.png" width="850">  
 </p>
 
 ____
