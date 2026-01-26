@@ -75,10 +75,10 @@ gradle clean mkb_test
 ***Удалённый запуск через Jenkins:***
 ```bash  
 clean mkb_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DconfigMode=remote (для удалённого запуска, local - для локального)
+-Dbrowser=${browser}
+-DbrowserVersion=${browserVersion}
+-DbrowserSize=${browserSize}
+-DconfigMode=remote (для удалённого запуска, local - для локального)
 ```
 ___
 <a id="allure"></a>
