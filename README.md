@@ -63,6 +63,8 @@ ____
 - *browser (браузер, по умолчанию chrome)*
 - *browserVersion (версия браузера, по умолчанию 100.0)*
 - *browserSize (размер окна браузера, по умолчанию 1920x1080)*
+- *configMode (выбор конфигурации для запуска)
+- *remote.url (ссылка с кредами для запуска тестов в Selenoid Cloud)
 
 <a id="console"></a>
 ## Команды для запуска из терминала
@@ -79,6 +81,7 @@ clean mkb_test
 -DbrowserVersion=${browserVersion}
 -DbrowserSize=${browserSize}
 -DconfigMode=remote (для удалённого запуска, local - для локального)
+-Dremote.url=${REMOTE_URL} 
 ```
 ___
 <a id="allure"></a>
