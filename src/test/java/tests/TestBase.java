@@ -26,7 +26,7 @@ public class TestBase {
         Configuration.baseUrl = config.baseUrl();
         Configuration.pageLoadStrategy = config.pageLoadStrategy();
 
-        // Режим работы
+        String remoteUrl = System.getProperty("remote.url", config.remoteUrl());
         if (config.remote()) {
             Configuration.remote = config.remoteUrl();
             MutableCapabilities browserOptions = new MutableCapabilities();

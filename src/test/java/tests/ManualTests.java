@@ -13,7 +13,7 @@ public class ManualTests {
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
     @Description("Проверка корректного отображения разделов раскрытия информации")
-    @DisplayName("Проверка корректного отображения разделов раскрытия информации")
+    @DisplayName("Раздел раскрытия информации")
     @Test
     @Tag("MainPageTests")
     void mkbLoginTest() {
@@ -25,7 +25,7 @@ public class ManualTests {
     @Story("Отображение обязательной информации на странице")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
-    @DisplayName("Проверка поиска информации на странице раскрытия информации")
+    @DisplayName("Раздел раскрытия информации - поиск")
     @Description("Проверка поиска информации на странице раскрытия информации")
     @Test
     @Tag("MainPageTests")
